@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CursosComponent implements OnInit {
   
   nomeCurso: string;
+  cursos: string[] = ['Abap', 'Java', 'Go Lang']
 
   constructor(){
     this.nomeCurso = 'Curso da marotagem e da malandragem do Angular 2.x+'
