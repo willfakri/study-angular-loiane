@@ -1,1 +1,20 @@
-<p>data-binding works!</p>
+<section class="property-binding">
+    <article>
+        <h3>
+            Interpolation
+        </h3>
+        <p>A soma de {{ valor1 }} + {{valor2 }} é igual a {{ valor1 + valor2 }}.</p>
+        <p>A soma anterior é maior que 10? {{ getMaiorQue10() }}</p>
+        <p>A soma anterior é maior que 10 e a toggle está ligada? {{ getMaiorQue10() && featureToggle }}</p>
+    </article>
+
+    <article>
+        <h3>
+            Property binding
+        </h3>
+        <img src="{{urlImagem}}">
+        <!-- Ao compilar o angular transforma [src] em bind-src -->
+        <img [src]="urlImagem">
+        <img bind-src="urlImagem"> 
+    </article>
+</section>
