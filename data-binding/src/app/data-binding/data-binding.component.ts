@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-data-binding',
   templateUrl: './data-binding.component.html',
-  styleUrls: ['./data-binding.component.css']
+  styleUrls: ['./data-binding.component.css',
+  '../../../node_modules/bootstrap/dist/css/bootstrap.min.css']
 })
 export class DataBindingComponent {
 

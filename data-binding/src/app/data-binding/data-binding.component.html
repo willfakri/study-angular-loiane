@@ -1,6 +1,38 @@
 <section class="property-binding">
     <article>
         <h3>
+            Bootstrap - alerts
+        </h3>
+        <select #classe (change)="0">
+            <option value="alert-success">Sucesso</option>
+            <option value="alert-info">Informação</option>
+            <option value="alert-warning">Aviso</option>
+            <option value="alert-danger">Perigo</option>
+        </select>
+
+        <div class="alert {{classe.value}}" role="alert">
+            O item foi salvo com sucesso selecionando {{classe.value}}.
+        </div>
+
+        <div class="alert" role="alert"
+        [class.alert-success]="classe.value == 'alert-success'">
+            <strong>Sucesso!</strong> O item foi salvo com sucesso selecionando {{classe.value}}.
+        </div>
+        <div class="alert" role="alert"
+        [class.alert-info]="classe.value == 'alert-info'">
+            <strong>Sucesso!</strong> O item foi salvo com sucesso selecionando {{classe.value}}.
+        </div>
+        <div class="alert" role="alert"
+        [class.alert-warning]="classe.value == 'alert-warning'">
+            <strong>Sucesso!</strong> O item foi salvo com sucesso selecionando {{classe.value}}.
+        </div>
+        <div class="alert" role="alert"
+        [class.alert-danger]="classe.value == 'alert-danger'">
+            <strong>Sucesso!</strong> O item foi salvo com sucesso selecionando {{classe.value}}.
+        </div>
+    </article>
+    <article>
+        <h3>
             Interpolation
         </h3>
         <p>A soma de {{ valor1 }} + {{valor2 }} é igual a {{ valor1 + valor2 }}.</p>
